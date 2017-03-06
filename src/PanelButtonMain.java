@@ -33,7 +33,7 @@ public class PanelButtonMain extends JPanel implements ActionListener {
             WindowSettings wS = new WindowSettings("Settings");
         }
         if(button == button3){
-
+           System.exit(0);
         }
     }
 

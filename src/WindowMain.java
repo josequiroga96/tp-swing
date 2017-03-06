@@ -8,12 +8,12 @@ public class WindowMain extends JFrame {
 
     public WindowMain(String name){
         super(name);
-        setBounds(200, 300, 300, 500);
+        setBounds(300, 250, 300, 250);
         setDefaultCloseOperation(this.EXIT_ON_CLOSE);
         setVisible(true);
+        setExtendedState(Frame.MAXIMIZED_BOTH);
         //pack();
         //setResizable(false);
-        //setExtendedState(Frame.MAXIMIZED_BOTH);
 
         PanelButtonMain pB = new PanelButtonMain();
         pB.setLayout(new BoxLayout(pB, BoxLayout.Y_AXIS));
