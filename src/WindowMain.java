@@ -5,14 +5,6 @@ import java.awt.event.ActionListener;
 
 
 
-
-    /*public WindowMain(){
-        super("Main menu");
-        setVisible(true);
-        setBounds(300, 250, 300, 250);
-        setDefaultCloseOperation(this.EXIT_ON_CLOSE);
-        setResizable(false);;*/
-
 /**
  * Created by JoseRojas on 6/3/17.
  */
@@ -24,7 +16,7 @@ public class WindowMain extends JFrame{
         setSize(400, 300);
         setLocationRelativeTo(null);
         setVisible(true);
-        setResizable(false);
+        setResizable(true);
 
         JPanel thePanel = new JPanel();
         add(thePanel);
@@ -35,6 +27,7 @@ public class WindowMain extends JFrame{
 
         JLabel tpSwing = new JLabel("tpSwing");
         JLabel names = new JLabel("José Rojas  Tomas Shilton");
+
         thePanel.add(Box.createRigidArea(new Dimension(0, 10)));
         thePanel.add(tpSwing);
         thePanel.add(Box.createRigidArea(new Dimension(0, 10)));
@@ -55,13 +48,16 @@ public class WindowMain extends JFrame{
 
         thePanel.setLayout(new BoxLayout(thePanel, BoxLayout.Y_AXIS));
 
-        button1.addActionListener(new ActionListener() {
+        Controller controller = new Controller();
+
+        button1.addActionListener(controller);
+                /*new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 WindowStart game = new WindowStart();
                 hide();
             }
-        });
+        });*/
 
         button2.addActionListener(new ActionListener() {
             @Override
