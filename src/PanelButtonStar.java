@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 /**
  * Created by JoseRojas on 6/3/17.
  */
+/*
 public class PanelButtonStar extends JPanel implements ActionListener {
     JButton button = new JButton("Back");
 
@@ -18,3 +19,4 @@ public class PanelButtonStar extends JPanel implements ActionListener {
 
     }
 }
+*/
