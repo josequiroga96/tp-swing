@@ -3,7 +3,7 @@
  */
 public class Main {
     public static void main(String[] args){
-        WindowMain wM = new WindowMain("Main Menu");
-        wM.pack();
+        WindowMain wM = new WindowMain();
+
     }
 }
