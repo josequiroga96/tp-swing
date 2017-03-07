@@ -6,7 +6,10 @@ import java.awt.event.ActionListener;
 /**
  * Created by JoseRojas on 6/3/17.
  */
-public class PanelButtonMain extends JPanel /*implements ActionListener*/ {
+/*
+public class PanelButtonMain extends JPanel */
+/*implements ActionListener*//*
+ {
     JButton button1 = new JButton("Start Game");
     JButton button2 = new JButton("Settings");
     JButton button3 = new JButton("Exit");
@@ -48,3 +51,4 @@ public class PanelButtonMain extends JPanel /*implements ActionListener*/ {
         g.drawString("José Rojas  Tomas Shilton", 570, 50);
     }
 }
+*/

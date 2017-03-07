@@ -23,7 +23,7 @@ public class WindowSetting extends JFrame {
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                WindowMainnnnnn returnB = new WindowMainnnnnn();
+                WindowMain returnB = new WindowMain();
                 hide();
             }
         });

@@ -7,6 +7,7 @@ import java.io.IOException;
 /**
  * Created by JoseRojas on 6/3/17.
  */
+/*
 public class WindowStar extends JFrame {
     public WindowStar(String name){
         super(name);
@@ -41,3 +42,4 @@ class ImagePanel extends JPanel{
 
     private Image imagen;
 }
+*/

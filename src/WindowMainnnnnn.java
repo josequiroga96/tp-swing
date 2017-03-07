@@ -4,6 +4,7 @@ import java.awt.*;
 /**
  * Created by JoseRojas on 6/3/17.
  */
+/*
 public class WindowMainnnnnn extends JFrame {
 
     public WindowMainnnnnn(String name){
@@ -20,3 +21,4 @@ public class WindowMainnnnnn extends JFrame {
         add(pB);
     }
 }
+*/

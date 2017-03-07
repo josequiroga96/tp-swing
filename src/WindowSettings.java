@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 /**
  * Created by JoseRojas on 6/3/17.
  */
+/*
 public class WindowSettings extends JFrame {
     public WindowSettings(String name){
         super(name);
@@ -55,3 +56,4 @@ class WindowCheck extends JPanel{
     }
 }
 
+*/
