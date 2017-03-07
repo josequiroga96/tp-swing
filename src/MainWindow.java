@@ -10,23 +10,29 @@ import java.awt.event.ActionListener;
  */
 public class MainWindow extends JFrame{
 
-    public MainWindow(){
+    private Controller controller;
+    JButton button1;
+    JButton button2;
+    JButton button3;
+
+    public MainWindow(Controller controller){
         super("Main Menu");
+        this.controller=controller;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
-        setVisible(true);
-        setResizable(true);
+        setResizable(false);
 
         JPanel thePanel = new JPanel();
-        add(thePanel);
 
-        JButton button1 = new JButton("Start Game");
-        JButton button2 = new JButton("Settings");
-        JButton button3 = new JButton("Exit");
+        button1 = new JButton("Start game");
+        button2 = new JButton("Settings");
+        button3 = new JButton("Exit");
 
-        JLabel tpSwing = new JLabel("tpSwing");
+        JLabel tpSwing = new JLabel("Trabajo Práctico Swing");
         JLabel names = new JLabel("José Rojas  Tomas Shilton");
+
+
 
         thePanel.add(Box.createRigidArea(new Dimension(0, 10)));
         thePanel.add(tpSwing);
@@ -35,6 +41,14 @@ public class MainWindow extends JFrame{
         thePanel.add(Box.createRigidArea(new Dimension(0, 20)));
         tpSwing.setAlignmentX(Component.CENTER_ALIGNMENT);
         names.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        Dimension buttonSize = new Dimension(150, 40);
+        button1.setMinimumSize(buttonSize);
+        button1.setMaximumSize(button1.getMinimumSize());
+        button2.setMinimumSize(buttonSize);
+        button2.setMaximumSize(button2.getMinimumSize());
+        button3.setMinimumSize(buttonSize);
+        button3.setMaximumSize(button3.getMinimumSize());
 
         thePanel.add(button1);
         thePanel.add(Box.createRigidArea(new Dimension(0, 15)));
@@ -48,9 +62,13 @@ public class MainWindow extends JFrame{
 
         thePanel.setLayout(new BoxLayout(thePanel, BoxLayout.Y_AXIS));
 
-        Controller controller = new Controller();
+        add(thePanel);
+
+
 
         button1.addActionListener(controller);
+
+
                 /*new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -59,21 +77,21 @@ public class MainWindow extends JFrame{
             }
         });*/
 
-        button2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                SettingsWindow setting = new SettingsWindow();
-                hide();
-            }
-        });
+        button2.addActionListener(controller);
 
-        button3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
-
+        button3.addActionListener(controller);
 
     }
+
+    /*public JButton getButton(int i){
+        if(i == 1){
+            return button1;
+        }
+        if(i == 2){
+            return button2;
+        }
+        if(i == 3){
+            return button3;
+        }
+    }*/
 }

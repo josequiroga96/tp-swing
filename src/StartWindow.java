@@ -7,25 +7,22 @@ import java.awt.event.ActionListener;
  * Created by JoseRojas on 6/3/17.
  */
 public class StartWindow extends JFrame {
-    public StartWindow(){
+    JButton back;
+    Controller controller;
+
+    public StartWindow(Controller controller){
+        this.controller=controller;
+        back = new JButton("Back");
         setTitle("Mario Kart 8");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1024, 768);
+        setSize(1024, 668);
         setLocationRelativeTo(null);
-        setVisible(true);
-        setResizable(true);
+        setResizable(false);
 
         JPanel thePanel = new JPanel();
         add(thePanel);
 
-        JButton back = new JButton("Back");
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                MainWindow returnB = new MainWindow();
-                hide();
-            }
-        });
+        back.addActionListener(controller);
 
 
         thePanel.setLayout(new BorderLayout());

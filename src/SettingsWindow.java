@@ -6,26 +6,23 @@ import java.awt.event.ActionListener;
  * Created by JoseRojas on 6/3/17.
  */
 public class SettingsWindow extends JFrame {
-    public SettingsWindow(){
+    Controller controller;
+    JButton back;
+
+    public SettingsWindow(Controller controller){
+        this.controller=controller;
         setTitle("Settings");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
-        setVisible(true);
-        setResizable(true);
+        setResizable(false);
 
         JPanel buttonPanel = new JPanel();
         add(buttonPanel);
 
-        JButton back = new JButton("Back");
+        back = new JButton("Back");
         buttonPanel.add(back);
 
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                MainWindow returnB = new MainWindow();
-                hide();
-            }
-        });
+        back.addActionListener(controller);
     }
 }
