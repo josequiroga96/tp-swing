@@ -55,9 +55,9 @@ public class MainWindow extends JFrame{
         thePanel.add(button2);
         thePanel.add(Box.createRigidArea(new Dimension(0, 15)));
         thePanel.add(button3);
-        button1.setAlignmentX(Component.CENTER_ALIGNMENT);
-        button2.setAlignmentX(Component.CENTER_ALIGNMENT);
-        button3.setAlignmentX(Component.CENTER_ALIGNMENT);
+        button1.setAlignmentX(CENTER_ALIGNMENT);
+        button2.setAlignmentX(CENTER_ALIGNMENT);
+        button3.setAlignmentX(CENTER_ALIGNMENT);
 
 
         thePanel.setLayout(new BoxLayout(thePanel, BoxLayout.Y_AXIS));
