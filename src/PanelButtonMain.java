@@ -9,7 +9,8 @@ import javax.swing.Box;
 /**
  * Created by JoseRojas on 6/3/17.
  */
-public class PanelButtonMain extends JPanel /*implements ActionListener*/ {
+/*
+public class PanelButtonMain extends JPanel implements ActionListener {
     JButton button1 = new JButton("Start Game");
 
     JButton button2 = new JButton("Settings");
@@ -86,3 +87,4 @@ public class PanelButtonMain extends JPanel /*implements ActionListener*/ {
 
 
 }
+*/
