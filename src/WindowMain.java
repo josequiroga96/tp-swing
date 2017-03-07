@@ -19,7 +19,7 @@ public class WindowMain extends JFrame {
 public class WindowMain extends JFrame{
 
     public WindowMain(){
-        setTitle("Mainnnnnn Menu");
+        setTitle("Main Menu");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
