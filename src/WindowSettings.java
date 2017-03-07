@@ -55,5 +55,6 @@ class WindowCheck extends JPanel{
         }
     }
 }
+*/
 
 */

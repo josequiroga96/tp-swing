@@ -2,6 +2,17 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+
+public class WindowMain extends JFrame {
+
+    /*public WindowMain(){
+        super("Main menu");
+        setVisible(true);
+        setBounds(300, 250, 300, 250);
+        setDefaultCloseOperation(this.EXIT_ON_CLOSE);
+        setResizable(false);;*/
+
 /**
  * Created by JoseRojas on 6/3/17.
  */
@@ -51,6 +62,7 @@ public class WindowMain extends JFrame{
                 System.exit(0);
             }
         });
+
 
     }
 
