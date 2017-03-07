@@ -11,6 +11,12 @@ public class Controller implements ActionListener{
     StartWindow startWindow;
     SettingsWindow settingsWindow;
 
+    JButton startButton = mainWindow.getButton(0);
+    JButton settingsButton = mainWindow.getButton(1);
+    JButton exitButton = mainWindow.getButton(2);
+    JButton backStartButton = startWindow.getButton();
+    JButton backSettingButton = settingsWindow.getButton();
+
 
     public Controller() {
 

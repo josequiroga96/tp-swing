@@ -33,4 +33,8 @@ public class StartWindow extends JFrame {
         thePanel.add(imageLabel, BorderLayout.CENTER);
 
     }
+
+    public JButton getButton(){
+        return back;
+    }
 }

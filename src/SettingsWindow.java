@@ -51,4 +51,8 @@ public class SettingsWindow extends JFrame {
 
         //back.addActionListener(controller);
     }
+
+    public JButton getButton(){
+        return back;
+    }
 }
