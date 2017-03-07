@@ -1,10 +1,10 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
 
-public class WindowMain extends JFrame {
 
     /*public WindowMain(){
         super("Main menu");
@@ -19,14 +19,12 @@ public class WindowMain extends JFrame {
 public class WindowMain extends JFrame{
 
     public WindowMain(){
-        setTitle("Main Menu");
+        super("Main Menu");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
         setVisible(true);
-        setResizable(true);
-        //this.pack();
-
+        setResizable(false);
 
         JPanel thePanel = new JPanel();
         add(thePanel);
@@ -34,9 +32,26 @@ public class WindowMain extends JFrame{
         JButton button1 = new JButton("Start Game");
         JButton button2 = new JButton("Settings");
         JButton button3 = new JButton("Exit");
+
+        JLabel tpSwing = new JLabel("tpSwing");
+        JLabel names = new JLabel("José Rojas  Tomas Shilton");
+        thePanel.add(Box.createRigidArea(new Dimension(0, 10)));
+        thePanel.add(tpSwing);
+        thePanel.add(Box.createRigidArea(new Dimension(0, 10)));
+        thePanel.add(names);
+        thePanel.add(Box.createRigidArea(new Dimension(0, 20)));
+        tpSwing.setAlignmentX(Component.CENTER_ALIGNMENT);
+        names.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         thePanel.add(button1);
+        thePanel.add(Box.createRigidArea(new Dimension(0, 15)));
         thePanel.add(button2);
+        thePanel.add(Box.createRigidArea(new Dimension(0, 15)));
         thePanel.add(button3);
+        button1.setAlignmentX(Component.CENTER_ALIGNMENT);
+        button2.setAlignmentX(Component.CENTER_ALIGNMENT);
+        button3.setAlignmentX(Component.CENTER_ALIGNMENT);
+
 
         thePanel.setLayout(new BoxLayout(thePanel, BoxLayout.Y_AXIS));
 
