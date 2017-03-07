@@ -6,8 +6,8 @@ import java.awt.event.ActionListener;
 /**
  * Created by JoseRojas on 6/3/17.
  */
-public class WindowStart extends JFrame {
-    public WindowStart(){
+public class StartWindow extends JFrame {
+    public StartWindow(){
         setTitle("Mario Kart 8");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1024, 768);
@@ -22,7 +22,7 @@ public class WindowStart extends JFrame {
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                WindowMain returnB = new WindowMain();
+                MainWindow returnB = new MainWindow();
                 hide();
             }
         });

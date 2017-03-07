@@ -9,7 +9,7 @@ public class Controller implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
 
-        WindowStart game = new WindowStart();
+        StartWindow game = new StartWindow();
         //hide();
     }
 }

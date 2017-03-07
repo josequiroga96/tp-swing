@@ -8,9 +8,9 @@ import java.awt.event.ActionListener;
 /**
  * Created by JoseRojas on 6/3/17.
  */
-public class WindowMain extends JFrame{
+public class MainWindow extends JFrame{
 
-    public WindowMain(){
+    public MainWindow(){
         super("Main Menu");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
@@ -54,7 +54,7 @@ public class WindowMain extends JFrame{
                 /*new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                WindowStart game = new WindowStart();
+                StartWindow game = new StartWindow();
                 hide();
             }
         });*/
@@ -62,7 +62,7 @@ public class WindowMain extends JFrame{
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                WindowSetting setting = new WindowSetting();
+                SettingsWindow setting = new SettingsWindow();
                 hide();
             }
         });

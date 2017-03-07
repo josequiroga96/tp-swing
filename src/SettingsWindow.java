@@ -5,8 +5,8 @@ import java.awt.event.ActionListener;
 /**
  * Created by JoseRojas on 6/3/17.
  */
-public class WindowSetting extends JFrame {
-    public WindowSetting(){
+public class SettingsWindow extends JFrame {
+    public SettingsWindow(){
         setTitle("Settings");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
@@ -23,7 +23,7 @@ public class WindowSetting extends JFrame {
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                WindowMain returnB = new WindowMain();
+                MainWindow returnB = new MainWindow();
                 hide();
             }
         });
