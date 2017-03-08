@@ -15,26 +15,34 @@ public class SettingsWindow extends JFrame {
 
     public SettingsWindow(Controller controller){
         this.controller=controller;
-        JPanel settingsPanel = new JPanel();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(350, 400);
+        setSize(275, 350);
         setLocationRelativeTo(null);
         setResizable(false);
+
+        JPanel settingsPanel = new JPanel();
+
 
 
         JLabel settingsLabel = new JLabel("Settings");
         SoundPanel soundPanel = new SoundPanel();
         MusicPanel musicPanel = new MusicPanel();
         GraphicsPanel graphicsPanel = new GraphicsPanel();
+        JPanel buttonPanel = new JPanel();
+        JPanel tittlePanel = new JPanel();
 
-        soundPanel.setLayout(new FlowLayout());
+        tittlePanel.add(settingsLabel);
+
+
         soundPanel.setAlignmentX(FlowLayout.RIGHT);
-        musicPanel.setLayout(new FlowLayout());
         musicPanel.setAlignmentX(FlowLayout.RIGHT);
+        graphicsPanel.setAlignmentX(FlowLayout.RIGHT);
+        buttonPanel.setAlignmentX(FlowLayout.RIGHT);
+        tittlePanel.setAlignmentX(FlowLayout.RIGHT);
 
 
         settingsPanel.add(Box.createRigidArea(new Dimension(0, 50)));
-        settingsPanel.add(settingsLabel);
+        settingsPanel.add(tittlePanel);
         settingsLabel.setAlignmentX(CENTER_ALIGNMENT);
         settingsPanel.add(Box.createRigidArea(new Dimension(0, 50)));
         settingsPanel.add(soundPanel);
@@ -46,13 +54,10 @@ public class SettingsWindow extends JFrame {
 
 
 
-        //back = new JButton("Back");
-        //buttonPanel.add(back);
+        back = new JButton("Back");
+        buttonPanel.add(back);
+        settingsPanel.add(buttonPanel);
 
-        //back.addActionListener(controller);
-    }
-
-    public JButton getButton(){
-        return back;
+        back.addActionListener(controller);
     }
 }

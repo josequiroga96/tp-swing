@@ -11,11 +11,11 @@ public class Controller implements ActionListener{
     StartWindow startWindow;
     SettingsWindow settingsWindow;
 
-    JButton startButton = mainWindow.getButton(0);
+    /*JButton startButton = mainWindow.getButton(0);
     JButton settingsButton = mainWindow.getButton(1);
     JButton exitButton = mainWindow.getButton(2);
     JButton backStartButton = startWindow.getButton();
-    JButton backSettingButton = settingsWindow.getButton();
+    JButton backSettingButton = settingsWindow.getButton();*/
 
 
     public Controller() {
@@ -28,6 +28,54 @@ public class Controller implements ActionListener{
 
         settingsWindow = new SettingsWindow(this);
         settingsWindow.setVisible(false);
+
+
+        /*startButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainWindow.setVisible(false);
+                mainWindow.setLocationRelativeTo(null);
+                startWindow.setVisible(true);
+            }
+        });
+        settingsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainWindow.setVisible(false);
+                mainWindow.setLocationRelativeTo(null);
+                settingsWindow.setVisible(true);
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        backStartButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainWindow.setVisible(true);
+                settingsWindow.setVisible(false);
+                startWindow.setVisible(false);
+
+                settingsWindow.setLocationRelativeTo(null);
+                startWindow.setLocationRelativeTo(null);
+            }
+        });
+        backSettingButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainWindow.setVisible(true);
+                settingsWindow.setVisible(false);
+                startWindow.setVisible(false);
+
+                settingsWindow.setLocationRelativeTo(null);
+                startWindow.setLocationRelativeTo(null);
+            }
+        });*/
+
+
     }
 
 

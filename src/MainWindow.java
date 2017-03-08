@@ -14,11 +14,9 @@ public class MainWindow extends JFrame{
     JButton button1;
     JButton button2;
     JButton button3;
-    JButton[] myButtons;
 
     public MainWindow(Controller controller){
         super("Main Menu");
-        myButtons = new JButton[3];
         this.controller=controller;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
@@ -31,9 +29,7 @@ public class MainWindow extends JFrame{
         button2 = new JButton("Settings");
         button3 = new JButton("Exit");
 
-        myButtons[0] = button1;
-        myButtons[1] = button2;
-        myButtons[2] = button3;
+
 
         JLabel tpSwing = new JLabel("Trabajo Práctico Swing");
         JLabel names = new JLabel("José Rojas  Tomas Shilton");
@@ -87,9 +83,5 @@ public class MainWindow extends JFrame{
 
         button3.addActionListener(controller);
 
-    }
-
-    public JButton getButton(int i){
-        return myButtons[i];
     }
 }
