@@ -1,15 +1,11 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * Created by JoseRojas on 7/3/17.
  */
 public class SoundPanel extends JPanel{
 
-
-
-    public SoundPanel(Controller controller) {
+    public SoundPanel() {
 
         JRadioButton soundOn = new JRadioButton("On");
         JRadioButton soundOff = new JRadioButton("Off");
@@ -23,21 +19,6 @@ public class SoundPanel extends JPanel{
         soundGroup.add(soundOn);
         soundGroup.add(soundOff);
         soundOn.setSelected(true);
-
-        soundOn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controller.setSound(true);
-                //controller.printSelect();
-            }
-        });
-        soundOff.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controller.setSound(false);
-                //controller.printSelect();
-            }
-        });
 
     }
 }
