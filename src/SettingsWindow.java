@@ -17,6 +17,7 @@ public class SettingsWindow extends JFrame {
 
 
     public SettingsWindow(Controller controller){
+        super("Settings");
         this.controller=controller;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(275, 350);
