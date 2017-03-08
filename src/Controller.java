@@ -17,8 +17,8 @@ public class Controller implements ActionListener{
     JButton backStartButton = startWindow.getButton();
     JButton backSettingButton = settingsWindow.getButton();*/
 
-    private boolean sound;
-    private boolean music;
+    private boolean sound = true;
+    private boolean music = true;
     private boolean shadows;
     private boolean antiAliasing;
 
