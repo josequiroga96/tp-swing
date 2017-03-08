@@ -1,15 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by JoseRojas on 6/3/17.
- */
+
 public class MainWindow extends JFrame{
 
     private Controller controller;
     JButton button1;
     JButton button2;
     JButton button3;
+
+    /**
+     * Creates the main window with certain settings.
+     */
 
     public MainWindow(Controller controller){
         super("Main Menu");
@@ -31,7 +33,9 @@ public class MainWindow extends JFrame{
         JLabel names = new JLabel("José Rojas  Tomas Shilton");
 
 
-
+        /**
+         * Sets labels distribution.
+         */
         thePanel.add(Box.createRigidArea(new Dimension(0, 10)));
         thePanel.add(tpSwing);
         thePanel.add(Box.createRigidArea(new Dimension(0, 10)));
@@ -40,6 +44,9 @@ public class MainWindow extends JFrame{
         tpSwing.setAlignmentX(Component.CENTER_ALIGNMENT);
         names.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        /**
+         * Sets the same size for all buttons.
+         */
         Dimension buttonSize = new Dimension(150, 40);
         button1.setMinimumSize(buttonSize);
         button1.setMaximumSize(button1.getMinimumSize());
@@ -48,6 +55,9 @@ public class MainWindow extends JFrame{
         button3.setMinimumSize(buttonSize);
         button3.setMaximumSize(button3.getMinimumSize());
 
+        /**
+         * Sets buttons distribution.
+         */
         thePanel.add(button1);
         thePanel.add(Box.createRigidArea(new Dimension(0, 15)));
         thePanel.add(button2);
@@ -59,7 +69,6 @@ public class MainWindow extends JFrame{
 
 
         thePanel.setLayout(new BoxLayout(thePanel, BoxLayout.Y_AXIS));
-
         add(thePanel);
 
 

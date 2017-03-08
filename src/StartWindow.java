@@ -1,9 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by JoseRojas on 6/3/17.
- */
+
 public class StartWindow extends JFrame {
     JButton back;
     Controller controller;
@@ -22,10 +20,12 @@ public class StartWindow extends JFrame {
 
         back.addActionListener(controller);
 
-
         thePanel.setLayout(new BorderLayout());
         thePanel.add(back, BorderLayout.SOUTH);
 
+        /**
+         * Sets the image in the window.
+         */
         ImageIcon marioKart = new ImageIcon(getClass().getResource("mario_kart_8_arcade_racing_may_2014_mario_toadette_daisy_koopa_troopa_bowser_donkey_kong_luigi_waluigi_peach_93324_3840x2400-1024x640.jpg"));
         JLabel imageLabel = new JLabel(marioKart);
         thePanel.add(imageLabel, BorderLayout.CENTER);

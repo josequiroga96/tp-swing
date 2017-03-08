@@ -8,9 +8,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * Created by JoseRojas on 7/3/17.
- */
 public class Controller implements ActionListener{
 
     MainWindow mainWindow;
@@ -19,6 +16,11 @@ public class Controller implements ActionListener{
 
     InputStream ins;
     AudioStream mAudio;
+
+    /**
+     * Creates the controller with one of each window so that the three windows are all active at the same time and are
+     * shown or hidden depending on the moment.
+     */
 
     public Controller() {
 
@@ -43,6 +45,9 @@ public class Controller implements ActionListener{
 
     }
 
+    /**
+     * Depending on the button pressed, the action that takes place.
+     */
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -76,6 +81,10 @@ public class Controller implements ActionListener{
             startWindow.setLocationRelativeTo(null);
         }
     }
+
+    /**
+     * Prints the game settings according by checking if the buttons are selected or not.
+     */
 
     public void printSelect(){
         System.out.println("Game Settings: \n");

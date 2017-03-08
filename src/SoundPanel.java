@@ -2,13 +2,14 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Created by JoseRojas on 7/3/17.
- */
+
 public class SoundPanel extends JPanel{
 
     JRadioButton soundOn;
 
+    /**
+     * Creates a sound panel with certain settings ready to be added to the Settings Window.
+     */
 
     public SoundPanel(Controller controller) {
 
