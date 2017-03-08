@@ -29,22 +29,22 @@ public class SettingsWindow extends JFrame {
         MusicPanel musicPanel = new MusicPanel();
         GraphicsPanel graphicsPanel = new GraphicsPanel();
         JPanel buttonPanel = new JPanel();
-        JPanel tittlePanel = new JPanel();
+        JPanel titlePanel = new JPanel();
 
-        tittlePanel.add(settingsLabel);
+        titlePanel.add(settingsLabel);
 
 
         soundPanel.setAlignmentX(FlowLayout.RIGHT);
         musicPanel.setAlignmentX(FlowLayout.RIGHT);
         graphicsPanel.setAlignmentX(FlowLayout.RIGHT);
         buttonPanel.setAlignmentX(FlowLayout.RIGHT);
-        tittlePanel.setAlignmentX(FlowLayout.RIGHT);
+        titlePanel.setAlignmentX(FlowLayout.RIGHT);
 
 
-        settingsPanel.add(Box.createRigidArea(new Dimension(0, 50)));
-        settingsPanel.add(tittlePanel);
+        settingsPanel.add(Box.createRigidArea(new Dimension(0, 25)));
+        settingsPanel.add(titlePanel);
         settingsLabel.setAlignmentX(CENTER_ALIGNMENT);
-        settingsPanel.add(Box.createRigidArea(new Dimension(0, 50)));
+        settingsPanel.add(Box.createRigidArea(new Dimension(0, 10)));
         settingsPanel.add(soundPanel);
         settingsPanel.add(musicPanel);
         settingsPanel.add(graphicsPanel);
