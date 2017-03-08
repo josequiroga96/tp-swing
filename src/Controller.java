@@ -17,6 +17,11 @@ public class Controller implements ActionListener{
     JButton backStartButton = startWindow.getButton();
     JButton backSettingButton = settingsWindow.getButton();*/
 
+    private boolean sound;
+    private boolean music;
+    private boolean shadows;
+    private boolean antiAliasing;
+
 
     public Controller() {
 
@@ -28,6 +33,7 @@ public class Controller implements ActionListener{
 
         settingsWindow = new SettingsWindow(this);
         settingsWindow.setVisible(false);
+
 
 
         /*startButton.addActionListener(new ActionListener() {
@@ -104,5 +110,31 @@ public class Controller implements ActionListener{
             settingsWindow.setLocationRelativeTo(null);
             startWindow.setLocationRelativeTo(null);
         }
+    }
+
+    private void printSelect(){
+        System.out.println("Game Settings: \n");
+        System.out.println(sound ? "Sound:    On" : "Sound:    Off");
+        System.out.println(music ? "Music:    On" : "Music:    Off ");
+        System.out.println(shadows ? "Shadows:    On" : "Shadows:    Off ");
+        System.out.println(antiAliasing ? "Anti-Aliasing:    On" : "Anti-Aliasing:    Off ");
+        System.out.println("- - - - - - - - - - - - - - - -");
+    }
+
+    public void setSound(boolean b){
+        sound = b;
+        printSelect();
+    }
+    public void setMusic(boolean b){
+        music = b;
+        printSelect();
+    }
+    public void setShadows(boolean b){
+        shadows = b;
+        printSelect();
+    }
+    public void setAntiAliasing(boolean b){
+        antiAliasing = b;
+        printSelect();
     }
 }

@@ -10,8 +10,11 @@ import java.awt.event.ActionListener;
  * Created by JoseRojas on 6/3/17.
  */
 public class SettingsWindow extends JFrame {
+
     Controller controller;
     JButton back;
+
+
 
     public SettingsWindow(Controller controller){
         this.controller=controller;
@@ -25,9 +28,9 @@ public class SettingsWindow extends JFrame {
 
 
         JLabel settingsLabel = new JLabel("Settings");
-        SoundPanel soundPanel = new SoundPanel();
-        MusicPanel musicPanel = new MusicPanel();
-        GraphicsPanel graphicsPanel = new GraphicsPanel();
+        SoundPanel soundPanel = new SoundPanel(controller);
+        MusicPanel musicPanel = new MusicPanel(controller);
+        GraphicsPanel graphicsPanel = new GraphicsPanel(controller);
         JPanel buttonPanel = new JPanel();
         JPanel tittlePanel = new JPanel();
 

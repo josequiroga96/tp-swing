@@ -1,12 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by JoseRojas on 7/3/17.
  */
 public class GraphicsPanel extends JPanel {
 
-    public GraphicsPanel(){
+    private boolean shadows;
+    private boolean antiAliasing;
+
+    public GraphicsPanel(Controller controller){
         JPanel gPanel = new JPanel();
         JPanel saPanel = new JPanel();
 
@@ -22,6 +27,33 @@ public class GraphicsPanel extends JPanel {
         add(saPanel);
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
+        shadowsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(shadows == false){
+                    shadows = true;
+                    controller.setShadows(true);
+                }
+                if(shadows == true){
+                    shadows = false;
+                    controller.setShadows(false);
+                }
+            }
+        });
+        antiAliasingButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(antiAliasing == false){
+                    antiAliasing = true;
+                    controller.setAntiAliasing(true);
+                }
+                if(antiAliasing == true){
+                    antiAliasing = false;
+                    controller.setAntiAliasing(false);
+                }
+            }
+        });
 
     }
 }
