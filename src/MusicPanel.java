@@ -27,13 +27,13 @@ public class MusicPanel extends JPanel{
         musicOn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.setMusic(true);
+                controller.setMusic(false);
             }
         });
         musicOff.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.setMusic(false);
+                controller.setMusic(true);
             }
         });
 

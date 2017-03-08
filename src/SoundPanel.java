@@ -27,13 +27,13 @@ public class SoundPanel extends JPanel{
         soundOn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.setSound(true);
+                controller.setSound(false);
             }
         });
         soundOff.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.setSound(false);
+                controller.setSound(true);
             }
         });
 
