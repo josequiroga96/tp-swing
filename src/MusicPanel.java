@@ -22,6 +22,7 @@ public class MusicPanel extends JPanel{
         ButtonGroup musicGroup = new ButtonGroup();
         musicGroup.add(musicOn);
         musicGroup.add(musicOff);
+        musicOn.setSelected(true);
 
         musicOn.addActionListener(new ActionListener() {
             @Override

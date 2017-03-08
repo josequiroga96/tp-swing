@@ -22,6 +22,7 @@ public class SoundPanel extends JPanel{
         ButtonGroup soundGroup = new ButtonGroup();
         soundGroup.add(soundOn);
         soundGroup.add(soundOff);
+        soundOn.setSelected(true);
 
         soundOn.addActionListener(new ActionListener() {
             @Override
