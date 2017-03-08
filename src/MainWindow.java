@@ -1,9 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-
 
 /**
  * Created by JoseRojas on 6/3/17.
@@ -69,15 +65,6 @@ public class MainWindow extends JFrame{
 
 
         button1.addActionListener(controller);
-
-
-                /*new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                StartWindow game = new StartWindow();
-                hide();
-            }
-        });*/
 
         button2.addActionListener(controller);
 
