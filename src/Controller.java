@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,18 +10,6 @@ public class Controller implements ActionListener{
     StartWindow startWindow;
     SettingsWindow settingsWindow;
 
-    /*JButton startButton = mainWindow.getButton(0);
-    JButton settingsButton = mainWindow.getButton(1);
-    JButton exitButton = mainWindow.getButton(2);
-    JButton backStartButton = startWindow.getButton();
-    JButton backSettingButton = settingsWindow.getButton();*/
-
-    private boolean sound = true;
-    private boolean music = true;
-    private boolean shadows;
-    private boolean antiAliasing;
-
-
     public Controller() {
 
         mainWindow = new MainWindow(this);
@@ -33,54 +20,6 @@ public class Controller implements ActionListener{
 
         settingsWindow = new SettingsWindow(this);
         settingsWindow.setVisible(false);
-
-
-
-        /*startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainWindow.setVisible(false);
-                mainWindow.setLocationRelativeTo(null);
-                startWindow.setVisible(true);
-            }
-        });
-        settingsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainWindow.setVisible(false);
-                mainWindow.setLocationRelativeTo(null);
-                settingsWindow.setVisible(true);
-            }
-        });
-        exitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
-        backStartButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainWindow.setVisible(true);
-                settingsWindow.setVisible(false);
-                startWindow.setVisible(false);
-
-                settingsWindow.setLocationRelativeTo(null);
-                startWindow.setLocationRelativeTo(null);
-            }
-        });
-        backSettingButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainWindow.setVisible(true);
-                settingsWindow.setVisible(false);
-                startWindow.setVisible(false);
-
-                settingsWindow.setLocationRelativeTo(null);
-                startWindow.setLocationRelativeTo(null);
-            }
-        });*/
-
 
     }
 
@@ -112,29 +51,12 @@ public class Controller implements ActionListener{
         }
     }
 
-    private void printSelect(){
+    public void printSelect(){
         System.out.println("Game Settings: \n");
-        System.out.println(sound ? "Sound:    On" : "Sound:    Off");
-        System.out.println(music ? "Music:    On" : "Music:    Off ");
-        System.out.println(shadows ? "Shadows:    On" : "Shadows:    Off ");
-        System.out.println(antiAliasing ? "Anti-Aliasing:    On" : "Anti-Aliasing:    Off ");
+        System.out.println(settingsWindow.getSoundPanel().soundOn.isSelected() ? "Sound:    On" : "Sound:    Off");
+        System.out.println(settingsWindow.getMusicPanel().musicOn.isSelected() ? "Music:    On" : "Music:    Off ");
+        System.out.println(settingsWindow.getGraphicsPanel().shadowsButton.isSelected() ? "Shadows:    On" : "Shadows:    Off ");
+        System.out.println(settingsWindow.getGraphicsPanel().antiAliasingButton.isSelected() ? "Anti-Aliasing:    On" : "Anti-Aliasing:    Off ");
         System.out.println("- - - - - - - - - - - - - - - -");
-    }
-
-    public void setSound(boolean b){
-        sound = b;
-        printSelect();
-    }
-    public void setMusic(boolean b){
-        music = b;
-        printSelect();
-    }
-    public void setShadows(boolean b){
-        shadows = b;
-        printSelect();
-    }
-    public void setAntiAliasing(boolean b){
-        antiAliasing = b;
-        printSelect();
     }
 }

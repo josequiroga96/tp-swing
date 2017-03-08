@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -8,16 +7,16 @@ import java.awt.event.ActionListener;
  */
 public class GraphicsPanel extends JPanel {
 
-    private boolean shadows;
-    private boolean antiAliasing;
+    JCheckBox shadowsButton;
+    JCheckBox antiAliasingButton;
 
     public GraphicsPanel(Controller controller){
         JPanel gPanel = new JPanel();
         JPanel saPanel = new JPanel();
 
         JLabel graphicsLabel = new JLabel("Graphics:                        ");
-        JCheckBox shadowsButton = new JCheckBox("Shadows");
-        JCheckBox antiAliasingButton = new JCheckBox("Anti-aliasing");
+        shadowsButton = new JCheckBox("Shadows");
+        antiAliasingButton = new JCheckBox("Anti-aliasing");
 
         gPanel.add(graphicsLabel);
         saPanel.add(shadowsButton);
@@ -31,27 +30,13 @@ public class GraphicsPanel extends JPanel {
         shadowsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(shadows == false){
-                    shadows = true;
-                    controller.setShadows(true);
-                }
-                if(shadows == true){
-                    shadows = false;
-                    controller.setShadows(false);
-                }
+                controller.printSelect();
             }
         });
         antiAliasingButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(antiAliasing == false){
-                    antiAliasing = true;
-                    controller.setAntiAliasing(true);
-                }
-                if(antiAliasing == true){
-                    antiAliasing = false;
-                    controller.setAntiAliasing(false);
-                }
+                controller.printSelect();
             }
         });
 

@@ -7,11 +7,12 @@ import java.awt.event.ActionListener;
  */
 public class MusicPanel extends JPanel{
 
+    JRadioButton musicOn;
 
 
     public MusicPanel(Controller controller){
 
-        JRadioButton musicOn = new JRadioButton("On");
+        musicOn = new JRadioButton("On");
         JRadioButton musicOff = new JRadioButton("Off");
         JLabel musicLabel = new JLabel("Music:");
 
@@ -27,13 +28,13 @@ public class MusicPanel extends JPanel{
         musicOn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.setMusic(false);
+                controller.printSelect();
             }
         });
         musicOff.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.setMusic(true);
+                controller.printSelect();
             }
         });
 

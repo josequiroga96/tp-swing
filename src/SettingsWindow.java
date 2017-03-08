@@ -1,9 +1,6 @@
-import javafx.scene.control.RadioButton;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 
 /**
@@ -14,6 +11,9 @@ public class SettingsWindow extends JFrame {
     Controller controller;
     JButton back;
 
+    SoundPanel soundPanel;
+    MusicPanel musicPanel;
+    GraphicsPanel graphicsPanel;
 
 
     public SettingsWindow(Controller controller){
@@ -29,9 +29,9 @@ public class SettingsWindow extends JFrame {
 
 
         JLabel settingsLabel = new JLabel("Settings");
-        SoundPanel soundPanel = new SoundPanel(controller);
-        MusicPanel musicPanel = new MusicPanel(controller);
-        GraphicsPanel graphicsPanel = new GraphicsPanel(controller);
+        soundPanel = new SoundPanel(controller);
+        musicPanel = new MusicPanel(controller);
+        graphicsPanel = new GraphicsPanel(controller);
         JPanel buttonPanel = new JPanel();
         JPanel titlePanel = new JPanel();
 
@@ -63,5 +63,15 @@ public class SettingsWindow extends JFrame {
         settingsPanel.add(buttonPanel);
 
         back.addActionListener(controller);
+    }
+
+    public GraphicsPanel getGraphicsPanel(){
+        return graphicsPanel;
+    }
+    public SoundPanel getSoundPanel(){
+        return soundPanel;
+    }
+    public MusicPanel getMusicPanel(){
+        return musicPanel;
     }
 }
