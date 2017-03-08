@@ -1,5 +1,12 @@
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by JoseRojas on 7/3/17.
@@ -9,6 +16,9 @@ public class Controller implements ActionListener{
     MainWindow mainWindow;
     StartWindow startWindow;
     SettingsWindow settingsWindow;
+
+    InputStream ins;
+    AudioStream mAudio;
 
     public Controller() {
 
@@ -21,6 +31,16 @@ public class Controller implements ActionListener{
         settingsWindow = new SettingsWindow(this);
         settingsWindow.setVisible(false);
 
+        File marioSong = new File("src/mario_kart_8_mario_kart_stadium_vmusice.wav");
+        try{
+            ins = new FileInputStream(marioSong);
+            mAudio = new AudioStream(ins);
+        }
+        catch (IOException e){
+            System.out.println("No se encuentra el archivo");
+        }
+
+
     }
 
 
@@ -32,6 +52,10 @@ public class Controller implements ActionListener{
             mainWindow.setVisible(false);
             mainWindow.setLocationRelativeTo(null);
             startWindow.setVisible(true);
+
+            if(settingsWindow.getMusicPanel().musicOn.isSelected()){
+                AudioPlayer.player.start(mAudio);
+            }
         }
         if(buttonSelected.equals(mainWindow.button2)){
             mainWindow.setVisible(false);
@@ -45,6 +69,8 @@ public class Controller implements ActionListener{
             mainWindow.setVisible(true);
             settingsWindow.setVisible(false);
             startWindow.setVisible(false);
+
+            AudioPlayer.player.stop(mAudio);
 
             settingsWindow.setLocationRelativeTo(null);
             startWindow.setLocationRelativeTo(null);
