@@ -90,6 +90,10 @@ public class Controller implements ActionListener{
      * Prints the game settings according by checking if the buttons are selected or not.
      */
 
+    /**
+     * Prints the game settings according by checking if the buttons are selected or not.
+     */
+
     public void printSelect(){
         System.out.println("Game Settings: \n");
         System.out.println(settingsWindow.getSoundPanel().soundOn.isSelected() ? "Sound:    On" : "Sound:    Off");
