@@ -2,13 +2,14 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Created by JoseRojas on 7/3/17.
- */
+
 public class MusicPanel extends JPanel{
 
     JRadioButton musicOn;
 
+    /**
+     * Creates a music panel with certain settings ready to be added to the Settings Window.
+     */
 
     public MusicPanel(Controller controller){
 

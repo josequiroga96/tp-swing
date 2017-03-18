@@ -8,9 +8,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * Created by JoseRojas on 7/3/17.
- */
 public class Controller implements ActionListener{
 
     MainWindow mainWindow;
@@ -19,6 +16,11 @@ public class Controller implements ActionListener{
 
     InputStream ins;
     AudioStream mAudio;
+
+    /**
+     * Creates the controller with one of each window so that the three windows are all active at the same time and are
+     * shown or hidden depending on the moment.
+     */
 
     public Controller() {
 
@@ -43,6 +45,9 @@ public class Controller implements ActionListener{
 
     }
 
+    /**
+     * Depending on the button pressed, the action that takes place.
+     */
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -58,24 +63,28 @@ public class Controller implements ActionListener{
             }
         }
         if(buttonSelected.equals(mainWindow.button2)){
-            mainWindow.setVisible(false);
-            mainWindow.setLocationRelativeTo(null);
-            settingsWindow.setVisible(true);
-        }
-        if(buttonSelected.equals(mainWindow.button3)){
-            System.exit(0);
-        }
-        if((buttonSelected.equals(startWindow.back)) || (buttonSelected.equals(settingsWindow.back))){
-            mainWindow.setVisible(true);
-            settingsWindow.setVisible(false);
-            startWindow.setVisible(false);
-
-            AudioPlayer.player.stop(mAudio);
-
-            settingsWindow.setLocationRelativeTo(null);
-            startWindow.setLocationRelativeTo(null);
-        }
+        mainWindow.setVisible(false);
+        mainWindow.setLocationRelativeTo(null);
+        settingsWindow.setVisible(true);
     }
+        if(buttonSelected.equals(mainWindow.button3)){
+        System.exit(0);
+    }
+        if((buttonSelected.equals(startWindow.back)) || (buttonSelected.equals(settingsWindow.back))){
+        mainWindow.setVisible(true);
+        settingsWindow.setVisible(false);
+        startWindow.setVisible(false);
+
+        AudioPlayer.player.stop(mAudio);
+
+        settingsWindow.setLocationRelativeTo(null);
+        startWindow.setLocationRelativeTo(null);
+    }
+}
+
+    /**
+     * Prints the game settings according by checking if the buttons are selected or not.
+     */
 
     public void printSelect(){
         System.out.println("Game Settings: \n");

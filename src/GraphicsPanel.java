@@ -2,13 +2,15 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Created by JoseRojas on 7/3/17.
- */
+
 public class GraphicsPanel extends JPanel {
 
     JCheckBox shadowsButton;
     JCheckBox antiAliasingButton;
+
+    /**
+     * Creates a graphics panel with certain settings ready to be added to the Settings Window.
+     */
 
     public GraphicsPanel(Controller controller){
         JPanel gPanel = new JPanel();

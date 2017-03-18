@@ -1,9 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by JoseRojas on 6/3/17.
- */
+
 public class SettingsWindow extends JFrame {
 
     Controller controller;
@@ -25,24 +23,30 @@ public class SettingsWindow extends JFrame {
         JPanel settingsPanel = new JPanel();
 
 
-
+        /**
+         * Creates the sound, music, graphics, button, and title panel.
+         */
         JLabel settingsLabel = new JLabel("Settings");
         soundPanel = new SoundPanel(controller);
         musicPanel = new MusicPanel(controller);
         graphicsPanel = new GraphicsPanel(controller);
-        JPanel buttonPanel = new JPanel();
+        JPanel backButtonPanel = new JPanel();
         JPanel titlePanel = new JPanel();
 
         titlePanel.add(settingsLabel);
 
-
+        /**
+         * Sets the panels' alignment.
+         */
         soundPanel.setAlignmentX(FlowLayout.RIGHT);
         musicPanel.setAlignmentX(FlowLayout.RIGHT);
         graphicsPanel.setAlignmentX(FlowLayout.RIGHT);
-        buttonPanel.setAlignmentX(FlowLayout.RIGHT);
+        backButtonPanel.setAlignmentX(FlowLayout.RIGHT);
         titlePanel.setAlignmentX(FlowLayout.RIGHT);
 
-
+        /**
+         * Sets the SettingsWindow distribution.
+         */
         settingsPanel.add(Box.createRigidArea(new Dimension(0, 25)));
         settingsPanel.add(titlePanel);
         settingsLabel.setAlignmentX(CENTER_ALIGNMENT);
@@ -55,10 +59,12 @@ public class SettingsWindow extends JFrame {
         add(settingsPanel);
 
 
-
+        /**
+         * Sets the back button.
+         */
         back = new JButton("Back");
-        buttonPanel.add(back);
-        settingsPanel.add(buttonPanel);
+        backButtonPanel.add(back);
+        settingsPanel.add(backButtonPanel);
 
         back.addActionListener(controller);
     }
